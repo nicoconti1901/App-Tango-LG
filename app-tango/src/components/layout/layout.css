@@ -1,0 +1,282 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.main-container::before {
+  content: "";
+  background-image: url('../../../public/freepik-export-20250120142839zsbq.png');
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.5) grayscale(100%); /* Reduce el brillo y aplica un efecto en blanco y negro */
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent !important; /* Hace que el navbar sea completamente transparente */
+  padding: 10px 40px;
+  position: fixed; /* Fija el navbar en la parte superior */
+  width: 100%;
+  z-index: 10;
+  top: 0;
+}
+
+.navbar-left, .navbar-center, .navbar-right {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Permite que los elementos ocupen el mismo espacio */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .brand {
+  margin-left: 20px; /* Ajusta este valor según sea necesario */
+}
+
+.navbar-center {
+  justify-content: center;
+}
+
+.navbar-right {
+  justify-content: flex-end;
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-right li {
+  position: relative;
+  animation: tango-slide-in 1s ease-in-out;
+  border-bottom: 2px solid #ff0000; /* Borde inferior sutil */
+}
+
+.navbar-right a {justify-content: flex-start;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-right a:hover {
+  color: #ff0000;
+}
+
+.logo {
+  height: 80px; /* Aumenta el tamaño del logo */
+  width: 120px;
+  border: 3px solid #ff0000; /* Añade un borde rojo alrededor del logo */
+  padding: 1px; /* Añade un poco de espacio interno */
+  border-radius: 15%; /* Cambia la forma del logo */
+  background-color: transparent; /* Añade un fondo blanco para mayor visibilidad */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade un efecto de sombra */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none; /* Oculta el contenido del dropdown por defecto */
+  position: absolute;
+  background-color: #fbf8f8;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0; /* Elimina el padding para evitar espacios en blanco */
+  min-width: 200px; /* Asegura que el dropdown tenga un ancho mínimo */
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px; /* Añade padding para separar los enlaces entre sí */
+  text-decoration: none;
+  display: block; /* Asegura que los enlaces ocupen todo el ancho del contenedor */
+  width: 100%; /* Asegura que los enlaces ocupen todo el ancho del contenedor */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.dropdown-content a:hover {
+  background-color: #080808;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Muestra el contenido del dropdown al hacer hover */
+}
+
+@keyframes tango-fade-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Desliza hacia abajo */
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px); /* Desliza hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Posición final */
+  }
+}
+
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff0000;
+  }
+}
+
+@keyframes tango-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes tango-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tango-fade-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Desliza hacia abajo */
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px); /* Desliza hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Posición final */
+  }
+}
+
+.brand {
+  color: #8B0000; /* Rojo oscuro */
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Great Vibes', cursive; /* Cambia la fuente a Great Vibes */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 20px; /* Ajusta este valor según sea necesario */
+  overflow: hidden; /* Ensures the text is hidden until the animation starts */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  background: linear-gradient(to right, #8B0000, #B22222); /* Degradado de rojo oscuro a burdeos */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-right: 0.15em solid #8B0000; /* Creates the caret effect */
+  animation: 
+    tango-fade-slide-in 3s ease-out forwards, /* First animation */
+    blink-caret 0.75s step-end infinite, /* Caret animation */
+    tango-fade-out 6s ease-out 6s forwards, /* Second animation, starts after the first one ends */
+    tango-fade-in 3s ease-out 12s infinite; /* Third animation, starts after the second one ends */
+}
+
+.footer {
+  background: linear-gradient(
+    to right,
+    #989797 15%,
+    #666 35%,
+    #000 50%,
+    #666 65%,
+    #989797 85%
+  ); /* Degradado de negro a blanco, con más negro */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-family: "Georgia", serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center;
+  padding: 0 40px; /* Aumenta el padding para separar las imágenes del borde */
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icon {
+  width: 80px; /* Ajusta el tamaño de los iconos */
+  height: auto;
+}
+
+.footer-center {
+  text-align: center;
+  flex: 2;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center; /* Centra los iconos horizontalmente */
+  gap: 40px; /* Aumenta la separación entre los iconos */
+  margin-top: 10px; /* Añade un margen superior para separar los iconos del texto */
+}
+
+.social-media a {
+  color: #ff0000;
+  font-size: 24px; /* Aumenta el tamaño de los iconos */
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Añade una transición suave */
+  padding: 10px; /* Añade padding alrededor de los iconos */
+  border-radius: 50%; /* Hace que los iconos sean circulares */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; /* Ajusta el ancho del contenedor del icono */
+  height: 44px; /* Ajusta la altura del contenedor del icono */
+}
+
+.social-media a:hover {
+  color: #fff;
+  background-color: #ff0000; /* Cambia el color de fondo al hacer hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade un efecto de sombra */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono al hacer hover */
+}
