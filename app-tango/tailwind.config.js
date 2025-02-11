@@ -2,8 +2,12 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfair: ["Playfair Display", "serif"],
+        lora: ["Lora", "serif"],
+      },
+    },
+    plugins: [],
   },
-  plugins: [],
-}
-
+};

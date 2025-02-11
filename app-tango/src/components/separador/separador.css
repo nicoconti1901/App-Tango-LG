@@ -1,0 +1,13 @@
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0; /* Espacio superior e inferior */
+  }
+  
+  .separator-line {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, #8B0000, #B22222); /* Degradado de rojo oscuro a burdeos */
+    border-radius: 1px;
+  }
