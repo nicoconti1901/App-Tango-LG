@@ -1,4 +1,7 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -6,15 +9,15 @@ html, body {
 }
 
 .main-container {
-  position: relative;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
   overflow: hidden; /* Evita que el contenido se desborde */
 }
 
 .main-container::before {
   content: "";
-  background-image: url('../../../public/freepik-export-20250120142839zsbq.png');
+  background-image: url("../../../public/freepik-export-20250120142839zsbq.png");
   background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
   background-position: center; /* Centra la imagen en el contenedor */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -30,23 +33,25 @@ html, body {
 header {
   margin: 0;
   padding: 0;
-  position: relative;
   width: 100%;
+  z-index: 10; /* Asegura que el header esté por encima del main-container */
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent !important; /* Hace que el navbar sea completamente transparente */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el navbar */
   padding: 10px 40px;
   position: fixed; /* Fija el navbar en la parte superior */
   width: 100%;
-  z-index: 10;
+  z-index: 20; /* Asegura que el navbar esté por encima del header */
   top: 0;
 }
 
-.navbar-left, .navbar-center, .navbar-right {
+.navbar-left,
+.navbar-center,
+.navbar-right {
   display: flex;
   align-items: center;
   flex: 1; /* Permite que los elementos ocupen el mismo espacio */
@@ -70,15 +75,17 @@ header {
   list-style: none;
   display: flex;
   gap: 2.5rem;
+  padding-right: 20px; /* Añadir padding a la derecha para separar del margen */
 }
 
 .navbar-right li {
   position: relative;
   animation: tango-slide-in 1s ease-in-out;
   border-bottom: 2px solid #ff0000; /* Borde inferior sutil */
+  padding-right: 10px; /* Añadir padding a la derecha para separar del margen */
 }
 
-.navbar-right a {justify-content: flex-start;
+.navbar-right a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
@@ -132,57 +139,14 @@ header {
   display: block; /* Muestra el contenido del dropdown al hacer hover */
 }
 
-@keyframes tango-fade-slide-in {
+.content {
+  flex: 1; /* Permite que el contenido principal ocupe el espacio restante */
+}
+
+@keyframes fade-in {
   0% {
     opacity: 0;
     transform: translateY(-20px); /* Desliza hacia abajo */
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(10px); /* Desliza hacia arriba */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* Posición final */
-  }
-}
-
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #ff0000;
-  }
-}
-
-@keyframes tango-fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes tango-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes tango-fade-slide-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px); /* Desliza hacia abajo */
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(10px); /* Desliza hacia arriba */
   }
   100% {
     opacity: 1;
@@ -191,24 +155,105 @@ header {
 }
 
 .brand {
-  color: #8B0000; /* Rojo oscuro */
+  color: #8b0000; /* Rojo oscuro */
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Great Vibes', cursive; /* Cambia la fuente a Great Vibes */
+  font-family: "Dancing Script" !important; /* Cambia la fuente a Dancing Script */
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0 20px; /* Ajusta este valor según sea necesario */
-  overflow: hidden; /* Ensures the text is hidden until the animation starts */
-  white-space: nowrap; /* Prevents the text from wrapping */
-  background: linear-gradient(to right, #8B0000, #B22222); /* Degradado de rojo oscuro a burdeos */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-right: 0.15em solid #8B0000; /* Creates the caret effect */
-  animation: 
-    tango-fade-slide-in 3s ease-out forwards, /* First animation */
-    blink-caret 0.75s step-end infinite, /* Caret animation */
-    tango-fade-out 6s ease-out 6s forwards, /* Second animation, starts after the first one ends */
-    tango-fade-in 3s ease-out 12s infinite; /* Third animation, starts after the second one ends */
+  overflow: hidden; /* Asegura que el texto esté oculto hasta que comience la animación */
+  white-space: nowrap; /* Evita que el texto se envuelva */
+  display: inline-block;
+}
+
+.navbar .brand span {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive !important; /* Cambia la fuente a Dancing Script */
+
+  opacity: 0;
+  animation: fade-in 8s  forwards infinite ; /* Aplica la animación de desvanecimiento */
+  color: #8b0000; /* Asegura que las letras sean visibles */
+  text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.7); /* Añade un sombreado blanco */
+
+}
+
+.navbar .brand span:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.navbar .brand span:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.navbar .brand span:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.navbar .brand span:nth-child(4) {
+  animation-delay: 1.8s;
+}
+
+.navbar .brand span:nth-child(5) {
+  animation-delay: 2.2s;
+}
+
+.navbar .brand span:nth-child(6) {
+  animation-delay: 2.6s;
+}
+
+.navbar .brand span:nth-child(7) {
+  animation-delay: 3s;
+}
+
+.navbar .brand span:nth-child(8) {
+  animation-delay: 3.4s;
+}
+
+.navbar .brand span:nth-child(9) {
+  animation-delay: 3.8s;
+}
+
+.navbar .brand span:nth-child(10) {
+  animation-delay: 4.2s;
+}
+
+.navbar .brand span:nth-child(11) {
+  animation-delay: 4.6s;
+}
+
+.navbar .brand span:nth-child(12) {
+  animation-delay: 5s;
+}
+
+.navbar .brand span:nth-child(13) {
+  animation-delay: 5.4s;
+}
+
+.navbar .brand span:nth-child(14) {
+  animation-delay: 5.8s;
+}
+
+.navbar .brand span:nth-child(15) {
+  animation-delay: 6.2s;
+}
+
+.navbar .brand span:nth-child(16) {
+  animation-delay: 6.6s;
+}
+
+.navbar .brand span:nth-child(17) {
+  animation-delay: 7s;
+}
+
+.navbar .brand span:nth-child(18) {
+  animation-delay: 7.4s;
+}
+
+.navbar .brand span:nth-child(19) {
+  animation-delay: 7.8s;
 }
 
 .footer {
@@ -223,13 +268,10 @@ header {
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  position: fixed;
   width: 100%;
-  bottom: 0;
-  left: 0;
   font-family: "Georgia", serif;
+  position: relative; /* Cambiar a relative o eliminar esta línea */
 }
-
 .footer-content {
   display: flex;
   justify-content: space-between; /* Distribuye el espacio entre los elementos */
