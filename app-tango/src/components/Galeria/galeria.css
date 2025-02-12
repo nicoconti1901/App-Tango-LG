@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap');
+
+.galeria-titulo {
+  font-family: 'Great Vibes', cursive; /* Fuente elegante */
+  font-size: 58px; /* Tamaño grande */
+  color: #8b0000; /* Rojo oscuro */
+  text-align: center;
+  margin: 40px 0;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Sombra para profundidad */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Espacio entre el texto y las decoraciones */
+}
+
+/* 🎭 Líneas decorativas en los costados */
+.decoracion {
+  font-size: 24px;
+  font-weight: bold;
+  color: #8b0000;
+  opacity: 0.8;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Ajusta la altura máxima de las imágenes */
+  object-fit: contain; /* Asegura que las imágenes se ajusten dentro del contenedor sin recortarse */
+}
+
+/* Ajusta el tamaño del carrusel */
+.carousel {
+  max-width: 80%;
+  margin: auto;
+}
+
+/* Personaliza los botones de navegación para que sean visibles */
+.custom-prev, .custom-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.custom-prev:hover, .custom-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta la posición */
+  width: 5%; /* Ajusta el tamaño del área de clic */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Hace los íconos visibles en fondos claros */
+}

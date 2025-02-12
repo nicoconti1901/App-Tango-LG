@@ -1,10 +1,12 @@
-
 import "./quienSoy.css"; // Archivo CSS personalizado para los estilos
 
 function QuienSoy() {
   return (
     <section className="historia-section">
-      <h2 className="historia-title">¿Quién Soy?</h2>
+      <h2 className="historia-title">
+        <span className="decoracion">⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</span> ¿Quien Soy?{" "}
+        <span className="decoracion">⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</span>
+      </h2>
       <div className="historia-content">
         <div className="historia-text">
           <p>
@@ -26,13 +28,11 @@ function QuienSoy() {
             Si querés sumarte a esta hermosa aventura del tango, ¡te espero para
             bailar juntos!
             <img
-            src="./../../public/historia2.png"
-            alt="Bailarines de Tango"
-            className="historia-image historia-image-right"
-          />
+              src="./../../public/historia2.png"
+              alt="Bailarines de Tango"
+              className="historia-image historia-image-right"
+            />
           </p>
-
-          
         </div>
       </div>
     </section>
