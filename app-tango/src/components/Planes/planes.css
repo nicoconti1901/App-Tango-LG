@@ -1,0 +1,53 @@
+.card {
+  background: #f4f1f1;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  font-family: 'Garamond', serif;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative; /* Necesario para posicionar el precio */
+  min-height: 400px; /* Asegura que todas las tarjetas tengan una altura mínima */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  color: #cc0000;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.card-description {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.6;
+  flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
+}
+
+.card-price {
+  font-size: 1.2em;
+  color: #b20000;
+  font-weight: bold;
+  position: absolute; /* Posiciona el precio */
+  bottom: 30px; /* Ajusta según el padding de la tarjeta */
+  right: 30px; /* Ajusta según el padding de la tarjeta */
+}
+
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.plan-card {
+  flex: 1 1 300px;
+  margin: 10px;
+}

@@ -26,7 +26,7 @@ const Layout = () => {
       <header>
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
           <div className="navbar-left">
-            <img src="/Logo.PNG" alt="Logo" className="logo" />
+            <img src="/Insignia.png" alt="Logo" className="logo" />
             <span className="brand">
               {"La Vida Es Un Tango.".split("").map((char, index) => (
                 <span key={index} style={{ marginRight: char === ' ' ? '0.5rem' : '0' }}>{char}</span>

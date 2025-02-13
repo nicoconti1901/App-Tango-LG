@@ -1,0 +1,12 @@
+
+.custom-icon {
+    height: 64px; /* Ajusta el tamaño según sea necesario */
+    width: 64px; /* Ajusta el tamaño según sea necesario */
+    border-radius: 50%;
+    display: block; /* Asegura que el icono se muestre como un bloque */
+    margin: 0 auto; /* Centra el icono horizontalmente */
+  }
+
+title{
+    color: brown;
+  }
