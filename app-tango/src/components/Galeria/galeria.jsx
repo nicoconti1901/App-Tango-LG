@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./galeria.css";
@@ -8,7 +9,7 @@ import carrusel3 from "../../assets/pexels-cristian-rojas-8281156.jpg";
 const Galeria = () => {
   return (
     <>
-      <h2 className="galeria-titulo">
+      <h2 id="galeria" className="titulo-section">
         <span className="decoracion">⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</span> Galería{" "}
         <span className="decoracion">⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</span>
       </h2>

@@ -1,0 +1,87 @@
+.plans-container {
+  display: flex;
+ justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.plan-card-container {
+  width: 30%;
+}
+
+.plan-card {
+  border-radius: 12px;
+  border: 2px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card .ant-card-meta-title {
+  color: white;
+}
+
+.plan-card .ant-card-meta-description {
+  color: gray;
+}
+
+.plan-card .text-3xl {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+}
+
+.plan-card .text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.plan-card .text-2xl {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.plan-card .mt-2 {
+  margin-top: 0.5rem; /* 8px */
+}
+
+.plan-card .mt-4 {
+  margin-top: 1rem; /* 16px */
+}
+
+.plan-card .mt-6 {
+  margin-top: 1.5rem; /* 24px */
+}
+
+.plan-card .w-16 {
+  width: 4rem; /* 64px */
+}
+
+.plan-card .h-1 {
+  height: 0.25rem; /* 4px */
+}
+
+.plan-card .bg-white {
+  background-color: white;
+}
+
+.plan-card .text-center {
+  text-align: center;
+}
+
+.plan-card .text-gray-300 {
+  color: #d1d5db; /* Gray 300 */
+}
+
+.plan-card .font-bold {
+  font-weight: 700;
+}
+
+.plan-card .font-semibold {
+  font-weight: 600;
+}
+
+.separator {
+  width: 60px;
+  height: 3px;
+  background: white;
+  margin: 10px auto;
+  border-radius: 5px;
+}

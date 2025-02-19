@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        lora: ["Lora", "serif"],
-      },
-    },
-    plugins: [],
+    extend: {},
   },
-};
+  plugins: [],
+}
+
