@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 
 html,
 body {
@@ -9,11 +9,17 @@ body {
   height: 100%;
 }
 
-.main-container {
+body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
-  overflow: hidden; /* Evita que el contenido se desborde */
+  min-height: 100vh;
+}
+
+.main-container {
+  flex: 1;
+  padding-top: 70px; /* Añade espacio superior para evitar que el contenido se superponga con la barra de navegación */
+  position: relative; /* Asegura que el contenido se posicione correctamente */
+  z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
 }
 
 .main-container::before {
@@ -22,13 +28,18 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: absolute;
+  position: fixed; /* Cambia a fixed para que la imagen de fondo no se recorte */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   filter: brightness(0.5); /* Reduce el brillo al 50% */
-  z-index: -1;
+  z-index: -1; /* Asegura que la imagen de fondo esté detrás del contenido */
+  transition: opacity 0.3s ease; /* Añade una transición suave para la opacidad */
+}
+
+.main-container.scrolled::before {
+  opacity: 0.7; /* Reduce la opacidad al hacer scroll */
 }
 
 header {
@@ -39,12 +50,12 @@ header {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
   background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.4s ease-in-out;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar.scrolled {
@@ -63,7 +74,6 @@ header {
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
 .navbar-left .brand {
@@ -141,6 +151,9 @@ header {
 
 .content {
   flex: 1; /* Permite que el contenido principal ocupe el espacio restante */
+  position: relative; /* Asegura que el contenido se posicione correctamente */
+  z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
+  margin-top: 100vh; /* Añade un margen superior para que el contenido comience después del header */
 }
 
 @keyframes fadeIn {
@@ -288,9 +301,6 @@ header {
   transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 }
 
-
-
-
 .footer {
   background: linear-gradient(
     to right,
@@ -356,7 +366,5 @@ header {
   color: #fff;
   background-color: #ff0000; /* Cambia el color de fondo al hacer hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade un efecto de sombra */
-  transform: scale(
-    1.1
-  ); /* Aumenta ligeramente el tamaño del icono al hacer hover */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del icono al hacer hover */
 }

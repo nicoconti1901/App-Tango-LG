@@ -1,53 +1,87 @@
-.card {
-  background: #f4f1f1;
-  border-radius: 8px;
-  padding: 30px;
-  margin: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 350px;
-  font-family: 'Garamond', serif;
-  transition: transform 0.3s;
+.plans-container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative; /* Necesario para posicionar el precio */
-  min-height: 400px; /* Asegura que todas las tarjetas tengan una altura mínima */
+ justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card-title {
-  color: #cc0000;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  font-family: 'Dancing Script', cursive;
-}
-
-.card-description {
-  color: #555;
-  font-size: 1em;
-  line-height: 1.6;
-  flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
-}
-
-.card-price {
-  font-size: 1.2em;
-  color: #b20000;
-  font-weight: bold;
-  position: absolute; /* Posiciona el precio */
-  bottom: 30px; /* Ajusta según el padding de la tarjeta */
-  right: 30px; /* Ajusta según el padding de la tarjeta */
-}
-
-.plans {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.plan-card-container {
+  width: 30%;
 }
 
 .plan-card {
-  flex: 1 1 300px;
-  margin: 10px;
+  border-radius: 12px;
+  border: 2px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card .ant-card-meta-title {
+  color: white;
+}
+
+.plan-card .ant-card-meta-description {
+  color: gray;
+}
+
+.plan-card .text-3xl {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+}
+
+.plan-card .text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.plan-card .text-2xl {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.plan-card .mt-2 {
+  margin-top: 0.5rem; /* 8px */
+}
+
+.plan-card .mt-4 {
+  margin-top: 1rem; /* 16px */
+}
+
+.plan-card .mt-6 {
+  margin-top: 1.5rem; /* 24px */
+}
+
+.plan-card .w-16 {
+  width: 4rem; /* 64px */
+}
+
+.plan-card .h-1 {
+  height: 0.25rem; /* 4px */
+}
+
+.plan-card .bg-white {
+  background-color: white;
+}
+
+.plan-card .text-center {
+  text-align: center;
+}
+
+.plan-card .text-gray-300 {
+  color: #d1d5db; /* Gray 300 */
+}
+
+.plan-card .font-bold {
+  font-weight: 700;
+}
+
+.plan-card .font-semibold {
+  font-weight: 600;
+}
+
+.separator {
+  width: 60px;
+  height: 3px;
+  background: white;
+  margin: 10px auto;
+  border-radius: 5px;
 }

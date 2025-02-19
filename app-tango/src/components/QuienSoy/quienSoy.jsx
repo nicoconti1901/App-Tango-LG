@@ -2,11 +2,13 @@ import "./quienSoy.css"; // Archivo CSS personalizado para los estilos
 
 function QuienSoy() {
   return (
-    <section className="historia-section">
-      <h2 className="historia-title">
+    <>
+    <h2 id="quien-soy" className="titulo-section">
         <span className="decoracion">⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</span> ¿Quien Soy?{" "}
         <span className="decoracion">⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</span>
       </h2>
+    <section className="historia-section">
+      
       <div className="historia-content">
         <div className="historia-text">
           <p>
@@ -36,6 +38,7 @@ function QuienSoy() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

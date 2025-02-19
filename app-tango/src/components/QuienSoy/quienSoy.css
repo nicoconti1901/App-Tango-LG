@@ -1,19 +1,12 @@
 .historia-section {
   padding: 20px;
-  background-color: #ffffff;
-}
-
-.historia-title {
-  font-family: 'Great Vibes', cursive; /* Fuente elegante */
-  font-size: 48px; /* Tamaño grande */
-  color: #8b0000; /* Rojo oscuro */
-  text-align: center;
-  margin: 40px 0;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Sombra para profundidad */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px; /* Espacio entre el texto y las decoraciones */
+  background: linear-gradient(
+    155deg,
+    #676565,
+    #f6f3f3,
+    #676565
+  ); /* Degradado de tonos rojos */  width: 100%;
+  box-sizing: border-box;
 }
 
 .decoracion {
@@ -23,12 +16,10 @@
   opacity: 0.8;
 }
 
-
 .historia-content {
   font-size: 1rem;
   line-height: 1.6;
-  color: #656060;
-  
+  color: #0b0b0b;
 }
 
 .historia-text {
