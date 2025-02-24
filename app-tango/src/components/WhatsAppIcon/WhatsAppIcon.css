@@ -1,0 +1,83 @@
+.whatsapp-icon {
+    position: fixed; /* Fija el ícono en una posición específica en la ventana */
+    bottom: 20px; /* Posiciona el ícono a 20px del borde inferior */
+    right: 20px; /* Posiciona el ícono a 20px del borde derecho */
+    background-color: #25d366; /* Color de fondo del ícono */
+    color: white; /* Color del ícono */
+    border-radius: 50%; /* Hace que el ícono sea circular */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    width: 60px; /* Ancho del ícono */
+    height: 60px; /* Altura del ícono */
+    font-size: 24px; /* Tamaño de la fuente del ícono */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor del ícono */
+    z-index: 1000; /* Asegura que el ícono esté por encima de otros elementos */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transición suave para cambios de sombra y fondo */
+    text-decoration: none; /* Elimina la subrayado del enlace */
+  }
+  
+  .whatsapp-icon:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra más intensa al hacer hover */
+    background-color: #7ef15b; /* Color de fondo más oscuro al hacer hover */
+  }
+  
+  .whatsapp-tooltip {
+    position: absolute;
+    bottom: 80px; /* Posiciona el globito de texto por encima del ícono */
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #333;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    border: 2px solid #25d366; /* Borde verde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor del globito */
+  }
+  
+  .whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Ajusta la posición de la flecha */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #25d366 transparent transparent transparent; /* Flecha con el mismo color de fondo */
+  }
+  
+  .whatsapp-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 0.5s ease-in-out; /* Animación de entrada y vibración */
+  }
+
+  .whatsapp-tooltip.vibrate {
+    animation: vibrate 0.5s ease-in-out; /* Animación de vibración */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px); /* Desliza hacia arriba */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Posición final */
+    }
+  }
+  
+  @keyframes vibrate {
+    0% { transform: translateX(50%); }
+    25% { transform: translateX(calc(50% - 2px)); }
+    50% { transform: translateX(calc(50% + 2px)); }
+    75% { transform: translateX(calc(50% - 2px)); }
+    100% { transform: translateX(50%); }
+  }

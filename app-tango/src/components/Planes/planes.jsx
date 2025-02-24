@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import { Card } from "antd";
 import { motion } from "framer-motion"; // Para animaciones sutiles
 import "./planes.css";
