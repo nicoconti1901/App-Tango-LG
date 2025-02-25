@@ -4,6 +4,7 @@ import Layout from "../../components/layout/layout.jsx";
 import Footer from "../../components/layout/footer.jsx";
 import Galeria from "../../components/Galeria/galeria.jsx";
 import Plans from "../../components/Planes/planes.jsx";
+import Contacto from "@/components/Contacto/contacto.jsx";
 
 const Home = () => {
   return (
@@ -19,8 +20,9 @@ const Home = () => {
       </div>
       <div id="contacto">
         
-        <Footer />
+        <Contacto />
       </div>
+      <Footer />
     </Layout>
   );
 };

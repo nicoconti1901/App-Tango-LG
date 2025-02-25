@@ -1,0 +1,122 @@
+.titulo-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .decoracion {
+    color: #25d366;
+  }
+  
+  .contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para que el mensaje de éxito esté encima del formulario */
+    background-image: url('path/to/your/tango-background.jpg'); /* Ruta a la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+  
+  .contact-form {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para resaltar el formulario */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #fff; /* Borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 500px;
+    position: relative; /* Para posicionar el mensaje de éxito */
+    margin-bottom: 30px;
+  }
+  
+  .logo-top-left {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .logo-top-right {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff; /* Color blanco para el texto del label */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para los inputs */
+  }
+  
+  .input-error {
+    border-color: red;
+  }
+  
+  .input-success {
+    border-color: green;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .success-message {
+    color: white;
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-button {
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background-color: #128c7e;
+  }
+
+  .logoCentrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+  }
+  
+  .logoCentrado img {
+    width: 70px;
+    height: 70px;
+  }
