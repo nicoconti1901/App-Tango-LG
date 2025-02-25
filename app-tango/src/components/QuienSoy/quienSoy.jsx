@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "./quienSoy.css"; // Archivo CSS personalizado para los estilos
 
 function QuienSoy() {
