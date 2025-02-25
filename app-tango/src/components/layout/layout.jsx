@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './layout.css';
+import WhatsAppIcon from '../WhatsAppIcon/WhatsAppIcon';
 
 const Layout = ({ children }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -63,6 +64,7 @@ const Layout = ({ children }) => {
       <div className="content">
         {children} {/* Contenido principal */}
       </div>
+      <WhatsAppIcon />
     </div>
   );
 };
